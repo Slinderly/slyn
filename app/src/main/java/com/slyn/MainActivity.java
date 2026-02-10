@@ -1,0 +1,19 @@
+package com.slyn;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+import android.view.Gravity;
+
+public class MainActivity extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        TextView tv = new TextView(this);
+        tv.setText("¡App slyn Generada!");
+        tv.setTextSize(24);
+        tv.setGravity(Gravity.CENTER);
+        setContentView(tv);
+    }
+}

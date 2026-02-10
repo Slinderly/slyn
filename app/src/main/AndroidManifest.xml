@@ -1,0 +1,31 @@
+package com.tu.paquete; // REVISA que coincida con el que pusiste en el script
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+        // Esto asocia el Java con el XML que creamos
+        setContentView(R.layout.activity_main);
+
+        // Referenciamos los elementos del XML
+        TextView texto = findViewById(R.id.miTexto);
+        Button boton = findViewById(R.id.miBotón);
+
+        // Acción al hacer clic
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                texto.setText("¡Funciona perfecto!");
+                Toast.makeText(MainActivity.this, "Compilado en la nube 🚀", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+}
